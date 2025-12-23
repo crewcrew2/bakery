@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () { /* на глпвной странице всплывает надпись!! */
-
+console.log("test commit");
     const title = document.querySelector('.hero-title');
 
     if (title) {
