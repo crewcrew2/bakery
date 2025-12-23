@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — Булочный Пёс</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+    <link href="https://fonts.googleapis.com/css2?
+family=Playfair+Display:wght@400;500;600&
+family=Inter:wght@300;400;500&
+family=Dancing+Script:wght@400;500&
+display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body class ="page-wrapper">
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'images/dogsdog.png' %}" alt="Булочный Пёс">
+        </div>
+        <nav class="main-nav">
+            <a href="{% url 'index' %}" class="nav-link">Главная</a>
+            <a href="/about/" class="nav-link">О Нас</a>
+            <a href="/registration/" class="nav-link active">Регистрация</a>
+            <a href="{% url 'vhod' %}" class="nav-link">Вход</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Registration -->
+<main class="registration-page">
+    <h1 class="registration-title">Регистрация</h1>
+
+    <div class="registration-card">
+        <form method="post">
+            {% csrf_token %}
+
+            <label>Логин</label>
+            <input type="text">
+
+            <label>Никнейм</label>
+            <input type="text">
+
+            <label>Имя</label>
+            <input type="text">
+
+            <label>Фамилия</label>
+            <input type="text">
+
+            <label>Отчество</label>
+            <input type="text">
+
+            <label>Электронная почта</label>
+            <input type="email">
+
+            <label>Номер телефона</label>
+            <input type="text">
+
+            <label>Пароль</label>
+            <input type="password">
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox">
+                    Я даю согласие на обработку персональных данных
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Я согласен(на) с правилами «Политики конфиденциальности»
+                </label>
+            </div>
+
+            <div class="gender-group">
+                <p>Пол</p>
+                <label><input type="radio" name="gender"> мужской</label>
+                <label><input type="radio" name="gender"> женский</label>
+                <label><input type="radio" name="gender"> не выбран</label>
+            </div>
+
+            <button type="submit" class="register-btn">Зарегистрироваться</button>
+
+            <p class="login-link">
+                уже есть аккаунт?
+                <a href="/login/">войти</a>
+            </p>
+        </form>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="copyright">© Булочный Пёс, 2025</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+.registration-page {
+    background-color: #FFF6E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.registration-title {
+    font-size: 36px;
+    color: #7A2E1D;
+    margin-bottom: 25px;
+}
+
+.registration-card {
+    background-color: #FFEAC6;
+    width: 380px;
+    padding: 30px;
+    border-radius: 18px;
+}
+
+.registration-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-card label {
+    font-size: 13px;
+    color: #5A3A2E;
+    margin-bottom: 4px;
+}
+
+.registration-card input[type="text"],
+.registration-card input[type="email"],
+.registration-card input[type="password"] {
+    height: 34px;
+    border-radius: 20px;
+    border: 1px solid #C9B29B;
+    padding: 0 14px;
+    margin-bottom: 14px;
+    outline: none;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #5A3A2E;
+}
+
+.gender-group p {
+    font-size: 13px;
+    color: #5A3A2E;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.gender-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #5A3A2E;
+}
+
+.register-btn {
+    margin-top: 10px;
+    background-color: #7A2E1D;
+    color: #fff;
+    border: none;
+    border-radius: 22px;
+    height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #652416;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 14px;
+    color: #5A3A2E;
+}
+
+.login-link a {
+    color: #7A2E1D;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+/* ====== АДАПТИВНОСТЬ ====== */
+
+/* Телефоны (375px) */
+@media (max-width: 375px) {
+    .registration-page {
+        padding: 15px;
+        min-height: auto;
+    }
+    
+    .registration-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .registration-card {
+        width: 100%;
+        padding: 20px;
+        border-radius: 12px;
+    }
+    
+    .registration-card input[type="text"],
+    .registration-card input[type="email"],
+    .registration-card input[type="password"] {
+        height: 30px;
+        font-size: 14px;
+        border-radius: 15px;
+        padding: 0 12px;
+    }
+    
+    .checkbox-group label,
+    .gender-group label {
+        font-size: 12px;
+        gap: 6px;
+    }
+    
+    .gender-group p {
+        font-size: 12px;
+    }
+    
+    .register-btn {
+        height: 36px;
+        font-size: 14px;
+        border-radius: 18px;
+        margin-top: 15px;
+    }
+    
+    .login-link {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+}
+
+/* Планшеты (960px) */
+@media (max-width: 960px) {
+    .registration-page {
+        padding: 30px 20px;
+    }
+    
+    .registration-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .registration-card {
+        max-width: 450px;
+        width: auto;
+        padding: 25px;
+    }
+    
+    .registration-card input[type="text"],
+    .registration-card input[type="email"],
+    .registration-card input[type="password"] {
+        height: 36px;
+        font-size: 15px;
+    }
+    
+    .checkbox-group label,
+    .gender-group label {
+        font-size: 14px;
+    }
+    
+    .gender-group p {
+        font-size: 14px;
+    }
+    
+    .register-btn {
+        height: 40px;
+        font-size: 15px;
+    }
+    
+    .login-link {
+        font-size: 13px;
+    }
+}
+
+/* Десктоп (1200px) */
+@media (min-width: 1200px) {
+    .registration-page {
+        padding: 50px;
+    }
+    
+    .registration-card {
+        max-width: 500px;
+        width: auto;
+        padding: 35px;
+    }
+    
+    .registration-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+    
+    .registration-card label {
+        font-size: 14px;
+    }
+    
+    .registration-card input[type="text"],
+    .registration-card input[type="email"],
+    .registration-card input[type="password"] {
+        height: 38px;
+        font-size: 16px;
+    }
+    
+    .checkbox-group label,
+    .gender-group label {
+        font-size: 14px;
+    }
+    
+    .gender-group p {
+        font-size: 14px;
+    }
+    
+    .register-btn {
+        height: 44px;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    
+    .login-link {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+}
+
+/* Большие экраны (1920px) */
+@media (min-width: 1920px) {
+    .registration-page {
+        padding: 80px;
+    }
+    
+    .registration-card {
+        max-width: 700px;
+        width: auto;
+        padding: 50px;
+        border-radius: 25px;
+    }
+    
+    .registration-title {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+    
+    .registration-card label {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .registration-card input[type="text"],
+    .registration-card input[type="email"],
+    .registration-card input[type="password"] {
+        height: 55px;
+        font-size: 20px;
+        border-radius: 30px;
+        padding: 0 25px;
+    }
+    
+    .checkbox-group label,
+    .gender-group label {
+        font-size: 20px;
+        margin-bottom: 15px;
+        gap: 15px;
+    }
+    
+    .gender-group p {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .register-btn {
+        height: 65px;
+        font-size: 22px;
+        border-radius: 35px;
+        margin-top: 35px;
+    }
+    
+    .login-link {
+        font-size: 20px;
+        margin-top: 35px;
+    }
+}
+
+/* Очень большие экраны (2560px) - ШИРЕ КОНТЕЙНЕР! */
+@media (min-width: 2560px) {
+    .registration-page {
+        padding: 100px 150px;
+    }
+    
+    .registration-card {
+        max-width: 900px;
+        width: auto;
+        padding: 70px;
+        border-radius: 40px;
+    }
+    
+    .registration-title {
+        font-size: 56px;
+        margin-bottom: 50px;
+    }
+    
+    .registration-card label {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .registration-card input[type="text"],
+    .registration-card input[type="email"],
+    .registration-card input[type="password"] {
+        height: 65px;
+        font-size: 24px;
+        border-radius: 35px;
+        padding: 0 30px;
+        margin-bottom: 20px;
+    }
+    
+    .checkbox-group label,
+    .gender-group label {
+        font-size: 24px;
+        margin-bottom: 20px;
+        gap: 18px;
+    }
+    
+    .gender-group p {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .register-btn {
+        height: 75px;
+        font-size: 26px;
+        border-radius: 40px;
+        margin-top: 40px;
+    }
+    
+    .login-link {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+}
+
+/* Дополнительно: для СВЕРХшироких экранов (3840px и больше) */
+@media (min-width: 3840px) {
+    .registration-page {
+        padding: 150px 250px;
+    }
+    
+    .registration-card {
+        max-width: 1200px;
+        width: auto;
+        padding: 90px;
+        border-radius: 50px;
+    }
+    
+    .registration-title {
+        font-size: 72px;
+        margin-bottom: 70px;
+    }
+    
+    .registration-card label {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .registration-card input[type="text"],
+    .registration-card input[type="email"],
+    .registration-card input[type="password"] {
+        height: 85px;
+        font-size: 32px;
+        border-radius: 45px;
+        padding: 0 40px;
+        margin-bottom: 25px;
+    }
+    
+    .checkbox-group label,
+    .gender-group label {
+        font-size: 32px;
+        margin-bottom: 25px;
+        gap: 20px;
+    }
+    
+    .gender-group p {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    
+    .register-btn {
+        height: 95px;
+        font-size: 34px;
+        border-radius: 50px;
+        margin-top: 50px;
+    }
+    
+    .login-link {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,74 @@
+/* Страница */
+.login-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Заголовок */
+.login-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #7a2e1f;
+    margin-bottom: 20px;
+}
+
+/* Карточка */
+.login-card {
+    background: #fdecc8;
+    padding: 30px 35px;
+    border-radius: 14px;
+    width: 360px;
+    text-align: center;
+}
+
+/* Форма */
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-card label {
+    font-size: 14px;
+    text-align: left;
+    color: #6b4a3a;
+}
+
+.login-card input {
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid #c4a484;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+}
+
+/* Кнопка */
+.login-card button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background: #7a2e1f;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background: #642318;
+}
+
+/* Низ */
+.login-footer {
+    margin-top: 16px;
+    font-size: 13px;
+}
+
+.login-footer a {
+    color: #7a2e1f;
+    text-decoration: none;
+    margin-left: 5px;
+}
