@@ -8,12 +8,6 @@
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/registration.css' %}">
-    <link href="https://fonts.googleapis.com/css2?
-family=Playfair+Display:wght@400;500;600&
-family=Inter:wght@300;400;500&
-family=Dancing+Script:wght@400;500&
-display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body class ="page-wrapper">
@@ -26,7 +20,7 @@ display=swap" rel="stylesheet">
         <nav class="main-nav">
             <a href="{% url 'index' %}" class="nav-link">Главная</a>
             <a href="/about/" class="nav-link">О Нас</a>
-            <a href="/registration/" class="nav-link active">Регистрация</a>
+            <a href="{% url 'registration' %}" class="nav-link">Регистрация</a>
             <a href="{% url 'vhod' %}" class="nav-link">Вход</a>
         </nav>
     </div>
@@ -82,7 +76,7 @@ display=swap" rel="stylesheet">
                 <label><input type="radio" name="gender"> не выбран</label>
             </div>
 
-            <button type="submit" class="register-btn">Зарегистрироваться</button>
+            <a href="{% url 'catalog' %}" class="register-btn">Зарегистрироваться</a>
 
             <p class="login-link">
                 Уже есть аккаунт?

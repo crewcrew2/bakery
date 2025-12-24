@@ -13,10 +13,10 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="{% static 'images/dogsdog.png' %}" alt="Логотип Булочный Пёс" />
+                <img src="{% static 'images/dogsdog.png' %}">
             </div>
             <nav class="main-nav">
-                <a href="/catalog/" class="nav-link">Меню</a>
+                <a href="{% url 'index' %}" class="nav-link">Главная</a>
                 <a href="/about/" class="nav-link">О Нас</a>
                 <a href="{% url 'registration' %}" class="nav-link">Регистрация</a>
                 <a href="{% url 'vhod' %}" class="nav-link">Вход</a>

@@ -13,10 +13,10 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="{% static 'images/dogsdog.png' %}" alt="Логотип Булочный Пёс" />
+                <img src="{% static 'images/dogsdog.png' %}">
             </div>
             <nav class="main-nav">
-                <a href="/catalog/" class="nav-link">Меню</a>
+                <a href="{% url 'catalog' %}" class="nav-link">Меню</a>
                 <a href="/about/" class="nav-link">О Нас</a>
                 <a href="{% url 'registration' %}" class="nav-link">Регистрация</a>
                 <a href="{% url 'vhod' %}" class="nav-link">Вход</a>
@@ -38,7 +38,7 @@
                     <p>к деталям. Мы гордимся тем, что наши покупатели</p>
                     <p>возвращаются снова и снова за кусочком счастья.</p>
                 </div>
-                <a href="/catalog/" class="menu-button">Меню</a>
+                <a href="{% url 'catalog' %}" class="menu-button">Меню</a>
                 <div class="description">
                     <p>
                         Мы создаём для тех, кто ценит натуральность, качество и душевность в каждой детали. 

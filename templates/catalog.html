@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Булочный Пёс</title>
+    <link rel="stylesheet" href="{% static 'css/catalog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/dogsdog.png' %}" alt="Логотип Булочный Пёс" />
+            </div>
+            <nav class="main-nav">
+                <a href="{% url 'index' %}" class="nav-link">Главная</a>
+                <a href="/about/" class="nav-link">О Нас</a>
+                <a href="{% url 'registration' %}" class="nav-link">Регистрация</a>
+                <a href="{% url 'vhod' %}" class="nav-link">Вход</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="menu-section">
+            <div class="container">
+                <h1 class="menu-title">Меню</h1>
+
+          <div class="menu-items">
+    {% for product in products %}
+        <div class="menu-card">
+            <div class="menu-image">
+                {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                {% endif %}
+            </div>
+            <div class="menu-content">
+                <h3 class="item-title">{{ product.name }}</h3>
+                <p class="item-description">{{ product.description }}</p>
+                <span class="price">{{ product.price }}₽</span>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">© Булочный пёс, 2025</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
