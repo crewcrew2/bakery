@@ -11,3 +11,21 @@ console.log("test commit");
         }, 200);
     }
 });
+
+
+if (document.querySelector('.about-page')) {
+    const aboutImage = document.querySelector('.about-image img');
+
+    if (aboutImage) {
+        
+        aboutImage.style.transition = 'transform 0.3s ease';
+
+        aboutImage.addEventListener('mouseenter', () => {
+            aboutImage.style.transform = 'scale(1.15)';   
+        });
+
+        aboutImage.addEventListener('mouseleave', () => {
+            aboutImage.style.transform = 'scale(1)'; 
+        });
+    }
+}
