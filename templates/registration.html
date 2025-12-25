@@ -19,7 +19,7 @@
         </div>
         <nav class="main-nav">
             <a href="{% url 'index' %}" class="nav-link">Главная</a>
-            <a href="/about/" class="nav-link">О Нас</a>
+            <a href="{% url 'about' %}" class="nav-link">О нас</a>
             <a href="{% url 'registration' %}" class="nav-link">Регистрация</a>
             <a href="{% url 'vhod' %}" class="nav-link">Вход</a>
         </nav>
@@ -76,11 +76,11 @@
                 <label><input type="radio" name="gender"> не выбран</label>
             </div>
 
-            <a href="{% url 'catalog' %}" class="register-btn">Зарегистрироваться</a>
+            <a href="{% url 'vhod' %}" class="register-btn">Зарегистрироваться</a>
 
             <p class="login-link">
                 Уже есть аккаунт?
-                <a href="/login/">войти</a>
+                <a href="{% url 'vhod' %}">войти</a>
             </p>
         </form>
     </div>
@@ -88,7 +88,7 @@
 
 <footer class="footer">
     <div class="container">
-        <p class="copyright">© Булочный Пёс, 2025</p>
+        <p class="copyright">© Булочный пёс, 2025</p>
     </div>
 </footer>
 
