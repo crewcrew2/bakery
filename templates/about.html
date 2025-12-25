@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Булочный Пёс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+<body class="page-wrapper">
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/dogsdog.png' %}" alt="Логотип">
+            </div>
+            <nav class="main-nav">
+                <a href="{% url 'index' %}" class="nav-link">Главная</a>
+                <a href="/about/" class="nav-link active">О Нас</a>
+                <a href="{% url 'registration' %}" class="nav-link">Регистрация</a>
+                <a href="{% url 'vhod' %}" class="nav-link">Вход</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="about-page">
+        <div class="container">
+            <h1 class="about-title">О Нас</h1>
+            
+            <div class="about-block">
+                <div class="about-text">
+                    <p class="main-text">
+                        В пекарне Булочный пес мы создаём не просто выпечку — мы создаём моменты счастья, которые запоминаются вкусом, ароматом и теплом.
+                    </p>
+                    <p class="secondary-text">
+                        Наша история началась с простой идеи: вернуть в повседневную жизнь подлинную ценность ручной работы и натуральных ингредиентов.
+                    </p>
+                </div>
+                
+                <div class="about-image">
+                    <img src="{% static 'images/dogv.png' %}" alt="Наша собачка">
+                </div>
+            </div>
+
+            <div class="location-block">
+                <div class="location-content">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5864.316625340233!2d48.39585043350964!3d54.31711292777748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415d376be148365d%3A0x653d56d0234ce602!2z0KbRg9C8!5e0!3m2!1sru!2sru!4v1766570684532!5m2!1sru!2sru" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="address">
+                        <p class="address-text">
+                            ул. Гончарова, 13/2<br>
+                            Ульяновск, Россия
+                        </p>
+                        <div class="contacts">
+                            <p> +7 (8422) 41-82-91</p>
+                            <p> ежедневно с 9:00 до 21:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
